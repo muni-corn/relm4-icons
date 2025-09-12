@@ -35,9 +35,9 @@ struct FluentFilter;
 impl IconFilter for FluentFilter {
     fn icon_name(path: &Path) -> Option<String> {
         let file_name = path.file_name().unwrap().to_str().unwrap();
-        if file_name.ends_with("16_filled.svg") || file_name.ends_with("16_regular.svg") {
+        if file_name.ends_with("20_filled.svg") || file_name.ends_with("20_regular.svg") {
             let file_name = file_name.trim_start_matches("ic_fluent_");
-            let file_name = file_name.replace("16_", "");
+            let file_name = file_name.replace("20_", "");
             let file_name = file_name.replace('_', "-");
             let file_name = file_name.replace(".svg", "-symbolic.svg");
             Some(file_name)
